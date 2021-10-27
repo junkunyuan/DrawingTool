@@ -1,0 +1,37 @@
+figsize: [9,6]
+cmap: 'coolwarm'                  # 必须设置为matplotlib中的colormap默认值，或者下一行这种
+# cmap: ['red','green','blue']    # 或者这种设置，里面颜色个数不限制
+
+xlabel: 'xlabel'     # x_label
+ylabel: 'ylabel'          # y_label
+zlabel: 'zlabel'
+xl_size: 10                     # x_label size
+yl_size: 10                     # y_label size
+zl_size: 10                   
+title_size: 10                  # title size
+
+xval: [-5.0, -2.5, 0.0, 2.5, 5.0]     # x轴参数取的值
+yval: [-5.0, -2.5, 0.0, 2.5, 5.0]     # y轴参数取的值
+
+tick:
+  x: null         # 设置x轴刻度，一般不设置，默认为xval
+  y: null         # 设置y轴刻度，一般不设置，默认为yval
+  z: null         # 这个需要手动设置或者程序内部自动生成
+
+tick_params:  # tick paras
+  axis: 'both'
+  labelsize: 10
+
+pane_color:       #设置面板颜色，使用RGBA的格式
+  x: [1,0.84,0,1.0]   
+  y: [1,0.84,0,1.0]
+
+contourf:         # 画映射到xy平面那个图的参数
+  offset: 0       # 这个平面相对于z=0平面的位置
+  cmap: null      # 这个平面颜色的变化，为null，就和3D图中的一样
+
+interp2d:
+  kind: 'cubic'   # 插值种类，这里选择3次样条插值法
+  xnew: 30        # 将xval的值扩展到30个
+  ynew: 30        # 将yval的值扩展到30个
+

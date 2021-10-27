@@ -1,0 +1,24 @@
+figsize: [9,6]
+
+xlabel: 'Labeled samples (%)'     # x_label
+ylabel: 'Accuracy (%)'          # y_label
+xl_size: 24                     # x_label size
+yl_size: 24                     # y_label size
+title_size: 24                  # title size
+
+xticks: [5,10,15,20,25,30]
+yticks: null
+
+ax:    
+  alpha: 0.05  # transparency of var
+  tick_params:  # tick paras
+    axis: 'both'
+    labelsize: 24
+  lw: 2  # line width
+  markersize: 10  # marker size
+grid:                             # grid paras
+  axis: 'both'
+  linestyle: '--'
+legend:                           # legend paras
+  fontsize: 18
+  loc: 'lower right'

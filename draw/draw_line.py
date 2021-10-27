@@ -1,9 +1,11 @@
+import sys
+sys.path.append('..')
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import rcParams
-from data import *
+from datas import loaditem
+from color import *
 from util import *
-plt.subplots()
 font_config = {
     'font.family': ['Times New Roman']
 }
@@ -52,13 +54,14 @@ def draw(dataitems, cfg, savename=None, usevar=True, usemk=True):
 if __name__ == '__main__':
     # Load data with paras [data_path, line color, marker, marker color].
     dataitems = loaditem(
-        path='./data/data.json',
+        path='../data/data.json',
+        itemtype='line',
         colors=colors1, 
         markers=markers, 
         mcolors=colors1)
     
     # Load configure.
-    cfg = loadcfg('./config.yaml')['draw_line']
+    cfg = loadcfg('../configs/line.yaml')
 
     # Set figure title.
     cfg['title'] = None
@@ -68,5 +71,5 @@ if __name__ == '__main__':
         cfg['yticks'] = init_yticks(dataitems, interval=2, low=0, up=0)
 
     # Draw figure.
-    draw(dataitems, cfg, savename='home-act-avg', usevar=True)       
+    draw(dataitems, cfg, savename='../home-act-avg', usevar=True)       
    

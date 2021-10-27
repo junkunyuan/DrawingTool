@@ -1,7 +1,10 @@
+import sys
+sys.path.append('..')
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import rcParams
-from data import *
+from datas import loaditem
+from color import *
 from util import *
 plt.subplots()
 font_config = {
@@ -43,10 +46,10 @@ def draw(dataitems, cfg, savename=None):
 
 if __name__ == '__main__':
     # Load data.
-    dataitems = loaditem('./data/test.json', colors2, markers, colors2)
+    dataitems = loaditem('../data/data.json','histogram', colors1)
     
     # Load config.
-    cfg = loadcfg('./config.yaml')['draw_histogram']
+    cfg = loadcfg('../configs/histogram.yaml')
     
     # Set title.
     cfg['title'] = 'Accuracy on PACS'
@@ -54,4 +57,4 @@ if __name__ == '__main__':
     cfg['ylims'] = mm_datas(dataitems)             
 
     # Draw figure.
-    draw(dataitems, cfg)    
+    draw(dataitems, cfg,savename='../histogram')    

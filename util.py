@@ -30,7 +30,7 @@ def mm_datas(dataitems, low=1, up=1):
     return mins, maxs
 
 
-def init_yticks(dataitems, interval=1, low=1, up=1):
+def init_yticks(dataitems, interval=1, low=1, up=1,toint=True):
     """
     Set the yticks by using the data information.
     Args:
@@ -42,10 +42,16 @@ def init_yticks(dataitems, interval=1, low=1, up=1):
         [list]: the displayed yticks.
     """
     mins, maxs = mm_datas(dataitems, low, up)
-    mins_int = int(mins)
-    maxs_int = int(maxs) + 1
+    add = interval / 2
+    if toint:
+        mins_int = int(mins)
+        maxs_int = int(maxs) + add
+    else:
+        mins_int = mins
+        maxs_int = maxs + add
+        print(mins_int,maxs_int)
     maxs_int = maxs_int + interval - (maxs_int - mins_int) % interval
-    yticks = np.arange(mins_int, maxs_int + 1, interval)
+    yticks = np.arange(mins_int, maxs_int + add, interval)
     return yticks
 
 
