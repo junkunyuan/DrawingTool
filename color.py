@@ -18,17 +18,14 @@ colors2 = ['#666666', green[1], '#369CFF', '#CC6600', '#FF6666', red[1]]
 colors3 = [yellow[1], blue[1], green[3], red[0], yellow[1], blue[0]]
 
 def newcmp(name,colorlist):
-    """生成一个新的colormap"""
+    """Create a new colormap."""
     return LinearSegmentedColormap.from_list(name,colorlist)
 
 def getcmp(cmp,name='temp'):
-    """如果cmp是cm中已经有的colormap名字，则直接返回，否则检查是否是用户配置的colorlist，
-    如果是的，就重新创建一个新的colormap
-    """
-
+    """if cmp exists in colormap, then return; then check if specifially set by user and create a new colormap."""
     if isinstance(cmp,str):
         return getattr(cm,cmp)
     elif isinstance(cmp,(list,tuple)):
         return newcmp(name,cmp)
     else:
-        raise '请输入正确的cmp参数'
+        raise 'please enter legal cmp paras'
