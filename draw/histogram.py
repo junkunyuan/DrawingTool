@@ -3,9 +3,9 @@ sys.path.append('..')
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import rcParams
-from datas import loaditem
-from color import *
-from util import *
+from lib.dataloader import loaditem
+from lib.color import *
+from tool.util import *
 plt.subplots()
 font_config = {
     'font.family': ['Times New Roman']
@@ -46,7 +46,7 @@ def draw(dataitems, cfg, savename=None):
 
 if __name__ == '__main__':
     # Load data.
-    dataitems = loaditem('../data/data.json','histogram', colors1)
+    dataitems = loaditem('../data/data.json','histogram', colors7_1)
     
     # Load config.
     cfg = loadcfg('../configs/histogram.yaml')

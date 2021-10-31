@@ -3,9 +3,9 @@ sys.path.append('..')
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import rcParams
-from datas import loaditem
-from color import *
-from util import *
+from lib.dataloader import loaditem
+from lib.color import *
+from tool.util import *
 font_config = {
     'font.family': ['Times New Roman']
 }
@@ -56,9 +56,9 @@ if __name__ == '__main__':
     dataitems = loaditem(
         path='../data/data.json',
         itemtype='line',
-        colors=colors1, 
+        colors=colors7_1, 
         markers=markers, 
-        mcolors=colors1)
+        mcolors=colors7_1)
     
     # Load configure.
     cfg = loadcfg('../configs/line.yaml')

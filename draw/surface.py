@@ -1,15 +1,15 @@
 import sys
 sys.path.append('..')
-from color import *
-from util import *
+from lib.color import *
+from tool.util import *
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import rcParams
 from scipy import interpolate
 
-from datas import loaditem
-from util import loadcfg
+from lib.dataloader import loaditem
+from tool.util import loadcfg
 font_config = {
     'font.family': ['Times New Roman']
 }

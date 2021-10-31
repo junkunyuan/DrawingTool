@@ -1,0 +1,12 @@
+figsize: [10,6]
+dpi: 80
+
+xlabel: null
+pointsize: 3
+marker: 'o'
+
+visible:
+  bottom: False
+  top: False
+  left: False
+  right: False
