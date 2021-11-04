@@ -4,10 +4,21 @@
 # run
 ``` bash
 cd draw
-python draw_line.py
-python draw_histogram.py
-python draw_surface.py
+python line.py
+python histogram.py
+python surface.py
+python tsne.py
 ```
+
+# examples
+* line
+![line](./data/examples/line.png)
+* histogram
+![histogram](./data/examples/histogram.png)
+* surface
+![surface](./data/examples/surface.png)
+* tsne
+![tsne](./data/examples/tsne.png)
 
 # Matplotlib优秀教程
 * [宏观概述matplotlib几大控件](https://www.jianshu.com/p/3937798d645b)
