@@ -13,10 +13,13 @@ python tsne.py
 # examples
 * line
 ![line](./data/examples/line.png)
+
 * histogram
 ![histogram](./data/examples/histogram.png)
+
 * surface
 ![surface](./data/examples/surface.png)
+
 * tsne
 ![tsne](./data/examples/tsne.png)
 
